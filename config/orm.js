@@ -1,4 +1,5 @@
-var connection = require("./connection");
+
+//var connection = require("./connection");
 
 // Object Relational Mapper (ORM)
 
@@ -7,20 +8,24 @@ var connection = require("./connection");
 // These help avoid SQL injection
 // https://en.wikipedia.org/wiki/SQL_injection
 
-function Devoured(data) {
+function Profiles(data) {
     
-    var devouredObjects = new Array(0);
+    var profileObjects = new Array(0);
+
+    console.log(data);
     
-    for(var i = 0; i < data.length; i++){
+   /* for(var i = 0; i < data.length; i++){
         if(data[i].devoured === 1){
          devouredObjects.push(data[i]);
         }  
-    }
+    } */
     
-    return devouredObjects;
+    return profileObjectsObjects;
     
 }
 
+
+/*
 function notDevoured(data) {
     
     var notDevouredObjects = new Array(0);
@@ -48,8 +53,7 @@ res.render("index", {notDevoured: notDevoured(data),Devoured: Devoured(data) });
 });
 
 },    
-    
-    
+ 
 createBurger: function(req,res){
  
 
@@ -65,7 +69,8 @@ res.json({ id: result.insertId });
 });    
 
 },
-    
+
+
 deleteBurger: function(req,res){
 
 connection.query("UPDATE burgers SET devoured = true WHERE id = ?", [req.params.id], function(err, result) {
@@ -85,6 +90,7 @@ res.status(200).end();
 }
     
     
-};
+}; 
+ */ 
 
-module.exports = orm;
+//module.exports = orm;

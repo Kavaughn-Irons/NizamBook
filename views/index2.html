@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Nizam Book</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+</head>
+
+
+<body style="background-color: #2a2a2a;opacity: 1;background-image:  linear-gradient(135deg, #000000 25%, transparent 25%), linear-gradient(225deg, #000000 25%, transparent 25%), linear-gradient(45deg, #000000 25%, transparent 25%), linear-gradient(315deg, #000000 25%, #2a2a2a 25%);background-position:  40px 0, 40px 0, 0 0, 0 0;
+background-size: 80px 80px;
+background-repeat: repeat;">
+
+    <div style="width: 100%; height: 150px; background-image: linear-gradient(to bottom, #434343 0%, black 100%);
+    text-align: center;" >
+      
+        <h1 class="text-center title;" style="padding-top: 40px; color: white;">Nizam Book</h1>
+    </div>
+
+    <div style="width: 100%; height: 150px; text-align: center; margin-top: 100px" >
+          <div style="border-radius:15px; background-image: linear-gradient(to bottom, #434343 0%, black 100%); height: 500px; width: 500px; margin: auto; z-index: -10;">
+
+
+              <h1 style="color: white; padding-top: 25px;">Login</h1>
+
+              <form class="clickbool">
+                
+                <h3><label for="fname" style="color: white; margin-right: 220px;">Username:</label></h3>
+                <input type="text" id="user" name="fname" style="color: white; caret-color: white; outline: none; width: 60%; background-color: transparent; border-right-color: transparent; border-top-color: transparent; border-left-color: transparent;  border-bottom-width: 2px; border-bottom-color: white;">
+                
+                
+                <h3><label for="fname" style="color: white; margin-right: 220px;">Password:</label></h3>
+                <input type="text" id="pass" name="fname" style="color: white; caret-color: white; outline: none; width: 60%; background-color: transparent; border-right-color: transparent; border-top-color: transparent; border-left-color: transparent;  border-bottom-width: 2px; border-bottom-color: white;">
+
+                <br>
+                
+              </form>
+              <input class="click" style="margin-top: 30px; background-color: white; width:200px; height: 50px;" type="submit" value="Login">
+
+
+          </div>       
+    </div>
+
+    <script class="run">
+
+            var Username = document.getElementById("user")
+            var Password = document.getElementById("pass")
+
+          
+            $(".click").on("click",function(){
+              if(Username.value === "nizam" && Password.value === "Bunny2007@"){
+                console.log("here!")
+                window.location.href = "/nizambunny2007"
+              }
+            })
+
+    </script>
+  
+
+</body>

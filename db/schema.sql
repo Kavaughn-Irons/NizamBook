@@ -1,12 +1,12 @@
-### Schema
+CREATE database NIZAM;
+USE NIZAM;
+Create TABLE Profiles
+(profile_id INT PRIMARY KEY, 
+Image VARCHAR (256),
+theName VARCHAR(256),
+Email VARCHAR(256),
+phoneNumber VARCHAR(256),
+Location VARCHAR(256)
 
-CREATE DATABASE burgers_db;
-USE burgers_db;
-
-CREATE TABLE burgers
-(
-	id INTEGER NOT NULL AUTO_INCREMENT,
-	burger varchar(255) NOT NULL,
-	devoured BOOLEAN DEFAULT false,
-	PRIMARY KEY (id)
 );
+
