@@ -2,7 +2,8 @@ const express = require("express");
 let test = require("multiline");
 const routes = require("./controllers/burgerController.js");
 const app = express();
-const browserify = require("browserify");
+const browserify = require("browserify"); 
+
 
 
 // Set the port of our application
@@ -18,11 +19,11 @@ const exphbs = require("express-handlebars");
 
 //app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 //app.set("view engine", "handlebars");
-
 // Use Handlebars to render the main index.html page with the plans in it.
 app.use(routes);
 // Start our server so that it can begin listening to client requests.
 app.listen(5000, function() {
   // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + 5000);
+  console.log("Server listening on: https://localhost:" + 5000);
 });
+

@@ -1,5 +1,5 @@
 const mysql = require("mysql");
-
+console.log("boom!");
 const connection = mysql.createConnection({host: 'localhost',
 port: "3306",
 user: 'root',
@@ -12,7 +12,7 @@ connection.connect(function(err) {
         console.error("error connecting: " + err.stack);
         return err;
     }else{
-      console.log("worked!");
+
     }
 });
 

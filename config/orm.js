@@ -1,5 +1,5 @@
 
-//var connection = require("./connection");
+var connection = require("./connection");
 
 // Object Relational Mapper (ORM)
 
@@ -7,21 +7,24 @@
 // The ? signs are for swapping out other values
 // These help avoid SQL injection
 // https://en.wikipedia.org/wiki/SQL_injection
+let run = async function(){
 
-function Profiles(data) {
-    
-    var profileObjects = new Array(0);
+let orm = new Promise((reject, resolve) => {
 
-    console.log(data);
-    
-   /* for(var i = 0; i < data.length; i++){
-        if(data[i].devoured === 1){
-         devouredObjects.push(data[i]);
-        }  
-    } */
-    
-    return profileObjectsObjects;
-    
+connection.query("SELECT * FROM profiles", function(err, data) {
+  if (err) {
+    //return res.status(500).end();
+  }
+  //res.render("index",{theProfiles: data});   
+    reject(data)
+
+  });
+
+
+})
+
+return orm;
+
 }
 
 
@@ -93,4 +96,4 @@ res.status(200).end();
 }; 
  */ 
 
-//module.exports = orm;
+module.exports = run;

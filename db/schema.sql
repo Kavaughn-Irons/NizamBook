@@ -10,3 +10,6 @@ Location VARCHAR(256)
 
 );
 
+INSERT INTO profiles (theName, Email, phoneNumber) VALUES("kavaughn","kavaughnirons@outlook.com","216-512-5069");
+
+delete from profiles where profile_id = 107;
